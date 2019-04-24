@@ -1,1 +1,9 @@
-index.erb
+<h1>List of Owners</h1>
+
+<a href="/owners/new">Add new owner</a>
+
+<ul>
+  <% @owners.each do |owner| %>
+  <li><a href="/owners/<%= owner.id %>"><%= owner.name %></a></li><br>
+  <% end %>
+</ul>
